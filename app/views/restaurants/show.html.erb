@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-body">
+    <h1><%= @restaurant.name %></h1>
+    <br>
+    <p>This is a <%= @restaurant.category %> restaurant.</p>
+    <p>It is located in <%= @restaurant.address %>.</p>
+    <br>
+    <%= yield %>
+    <div> <%= link_to "Rate this restaurant", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%> </div>
+  </div>
+</div>
+
+

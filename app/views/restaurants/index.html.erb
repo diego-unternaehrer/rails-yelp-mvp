@@ -1,0 +1,14 @@
+<h1> These are our restaurants</h1>
+
+<div class="card">
+  <ul class="list-group list-group-flush">
+    <% @restaurants.each do |restaurant| %>
+      <li  class="list-group-item">
+        <%= restaurant.name%>  ||
+        <%= restaurant.category%>  ||
+        <%= restaurant.address%>
+        <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+      </li>
+    <% end %>
+  </ul>
+</div>
